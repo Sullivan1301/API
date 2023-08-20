@@ -1,0 +1,138 @@
+openapi: 3.0.3
+info:
+  title: Onboarding API 1.2 - Teachers
+  description: |-
+    STD22048 
+    RAKOTONIAINA Joro Sullivan
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: hei.sullivan.2@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://STD22048
+tags:
+  - name: Teacher
+    description: Everything about your Teachers
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /teachers:
+    get:
+      tags:
+        - Teacher
+      summary: Get information about existing teachers
+      description: Get information about existing teachers and the courses they teach
+      operationId: getTeachers
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Teacher'
+    post:
+      tags:
+        - Teacher
+      summary: Add a new teacher
+      description: Add a new teacher along with the courses they teach
+      operationId: addTeacher
+      requestBody:
+        description: Create a new teacher with their courses
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Teacher'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Teacher'
+components:
+  schemas:
+    Teacher:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        firstName:
+          type: string
+        lastName:
+          type: string
+        courses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Course'
+      xml:
+        name: teacher
+
+    Course:
+      type: object
+      properties:
+        courseName:
+          type: string
+        courseCode:
+          type: string
+        courseDuration:
+          type: string
+      xml:
+        name: course
+
+# Exemples d'enseignants avec leurs cours
+examples:
+  TeacherRyan:
+    value:
+      firstName: Ryan
+      lastName: Andriamahery
+      courses:
+        - courseName: Web Services
+          courseCode: WS
+          courseDuration: 20h
+
+  TeacherLou:
+    value:
+      firstName: Lou
+      lastName: Maurica
+      courses:
+        - courseName: Systèmes Réseaux
+          courseCode: SYS2
+          courseDuration: 20h
+        - courseName: Intelligence Artificielle
+          courseCode: IA1
+          courseDuration: 10h
+
+  TeacherToky:
+    value:
+      firstName: Toky
+      lastName: Ramarozaka
+      courses:
+        - courseName: Algorithmes
+          courseCode: Prog1
+          courseDuration: 20h
+        - courseName: HTML CSS JS
+          courseCode: WEB1
+          courseDuration: 20h
+        - courseName: Java
+          courseCode: Prog2
+          courseDuration: 20h
+
+  TeacherSitraka:
+    value:
+      firstName: Sitraka
+      lastName: Andriaatina
+      courses:
+        - courseName: ReactJS
+          courseCode: WEB2
+          courseDuration: 20h
