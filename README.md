@@ -12,8 +12,6 @@ Bienvenue dans la documentation de l'API Onboarding. Cette API vous permet de g�
 
 - **GET /Student/{studentId}:** Trouvez un étudiant par ID. Utilisez cette API pour obtenir des informations détaillées sur un étudiant spécifique.
 
-### ... (Autres endpoints de votre API)
-
 ## Utilisation de l'API Swagger
 
 Vous pouvez également explorer la documentation interactive de l'API en utilisant Swagger UI. Cliquez sur le lien ci-dessous pour accéder à la documentation Swagger :
