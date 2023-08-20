@@ -1,4 +1,4 @@
-# API
+ API
 Learning to write APIs
 paths:
   /Student:
