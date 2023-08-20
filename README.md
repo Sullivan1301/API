@@ -1,24 +1,29 @@
 # API
 
-Bienvenue dans la documentation de l'API Onboarding. Cette API vous permet de gérer les étudiants de l'école.
+Bienvenue dans la documentation de l'API Onboarding. Cette API vous permet de gérer les étudiants et les enseignants de l'école.
 
 ## Endpoints
 
 ### Étudiants
 
-- **GET /Student:** Obtenez des informations sur les étudiants existants. Utilisez cette API pour récupérer des données sur les étudiants inscrits.
+- **GET /Student:** Obtenez des informations sur les étudiants existants.
 
-- **POST /Student:** Ajoutez un nouvel étudiant à l'école. Utilisez cette API pour inscrire de nouveaux étudiants.
+- **POST /Student:** Ajoutez un nouvel étudiant à l'école.
 
-- **PUT /Student/{studentId}:** Mettez à jour un étudiant par ID (Mise à jour intégrale). Utilisez cette API pour effectuer une mise à jour complète d'un étudiant.
+- **GET /Student/{studentId}:** Trouvez un étudiant par ID.
 
-- **DELETE /Student/{studentId}:** Supprimez un étudiant par ID. Utilisez cette API pour supprimer un étudiant de l'école.
+### Enseignants
+
+- **GET /teachers:** Obtenez des informations sur les enseignants existants.
+
+- **POST /teachers:** Ajoutez un nouvel enseignant à l'école.
 
 ## Utilisation de l'API Swagger
 
 La documentation interactive de l'API est disponible via Swagger UI. Cela vous permet de visualiser, explorer et tester chaque endpoint de l'API en détail.
 
-**[Accéder à la documentation Swagger](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/Sullivan1301/API/main/openapi.yaml)**
+- [Accéder à la documentation Swagger pour les étudiants](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/Sullivan1301/API/main/students.yaml)
+- [Accéder à la documentation Swagger pour les enseignants](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/Sullivan1301/API/main/teachers.yaml)
 
 ### Détails de la documentation
 
