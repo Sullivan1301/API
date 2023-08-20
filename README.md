@@ -14,8 +14,6 @@ Bienvenue dans la documentation de l'API Onboarding. Cette API vous permet de g�
 
 - **DELETE /Student/{studentId}:** Supprimez un étudiant par ID. Utilisez cette API pour supprimer un étudiant de l'école.
 
-### ... (Autres endpoints de votre API)
-
 ## Utilisation de l'API Swagger
 
 La documentation interactive de l'API est disponible via Swagger UI. Cela vous permet de visualiser, explorer et tester chaque endpoint de l'API en détail.
